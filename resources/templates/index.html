@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProManage - Project Management System</title>
+<style>
+/* Reset and Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background Animation */
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+	overflow-x: hidden;
+	color: white;
+}
+
+@keyframes gradient { 0% {
+	background-position: 0% 50%;
+}
+50%
+{
+background-position:
+100%
+50%;
+}
+100%
+{
+background-position:0%50%;
+}
+}
+
+/* Header Styles */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 50px;
+	background-color: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(10px);
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo img {
+	height: 40px;
+	margin-right: 10px;
+}
+
+.logo h1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+}
+
+nav ul li {
+	margin-left: 30px;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+	transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+	color: #ffd700;
+}
+
+/* Hero Section */
+.hero {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	padding: 0 50px;
+	position: relative;
+}
+
+.hero-content {
+	max-width: 600px;
+	z-index: 10;
+}
+
+.hero h2 {
+	font-size: 48px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+
+.hero p {
+	font-size: 18px;
+	margin-bottom: 30px;
+	line-height: 1.6;
+}
+
+.cta-button {
+	display: inline-block;
+	background-color: white;
+	color: #23a6d5;
+	padding: 12px 30px;
+	border-radius: 30px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Images */
+.floating-images {
+	position: absolute;
+	right: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 600px;
+	height: 400px;
+}
+
+.dashboard-img {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+	animation: float 6s ease-in-out infinite;
+}
+
+.task-img {
+	position: absolute;
+	width: 200px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+	animation: float 5s ease-in-out infinite;
+	animation-delay: 1s;
+	right: -50px;
+	bottom: -30px;
+}
+
+.team-img {
+	position: absolute;
+	width: 180px;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+	animation: float 7s ease-in-out infinite;
+	animation-delay: 2s;
+	left: -40px;
+	top: -40px;
+}
+
+@keyframes float { 0% {
+	transform: translateY(0px);
+}50%
+{
+transform:translateY
+(-20px);
+}
+100%
+{
+transform:translateY
+(0px);
+}
+}
+
+/* Features Section */
+.features {
+	padding: 100px 50px;
+	background-color: rgba(255, 255, 255, 0.9);
+	color: #333;
+}
+
+.features h2 {
+	text-align: center;
+	font-size: 36px;
+	margin-bottom: 60px;
+	color: #23a6d5;
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.feature-card {
+	background-color: white;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+.feature-card h3 {
+	font-size: 22px;
+	margin-bottom: 15px;
+	color: #e73c7e;
+}
+
+.feature-card p {
+	font-size: 16px;
+	color: #666;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="https://cdn-icons-png.flaticon.com/512/1688/1688400.png"
+				alt="ProManage Logo">
+			<h1>ProManage</h1>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Features</a></li>
+				<li><a href="#">Pricing</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="/register">Register</a></li>
+				<li><a href="#">Login</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<div class="hero-content">
+			<h2>Streamline Your Projects with Powerful Management Tools</h2>
+			<p>ProManage helps teams organize, track, and manage projects
+				efficiently. Collaborate in real-time, meet deadlines, and deliver
+				exceptional results every time.</p>
+			<a href="#" class="cta-button">Get Started for Free</a>
+		</div>
+
+		<div class="floating-images">
+			<img
+				src="https://www.teamwork.com/wp-content/uploads/2023/05/project-management-dashboa rd-1.png"
+				alt="Project Dashboard" class="dashboard-img"> <img
+				src="https://cdn-icons-png.flaticon.com/512/3652/3652191.png"
+				alt="Task Management" class="task-img"> <img
+				src="https://cdn-icons-png.flaticon.com/512/236/236832.png"
+				alt="Team Collaboration" class="team-img">
+		</div>
+	</section>
+
+	<section class="features">
+		<h2>Key Features</h2>
+		<div class="features-grid">
+			<div class="feature-card">
+				<img src="https://cdn-icons-png.flaticon.com/512/2913/2913109.png"
+					alt="Task Management">
+				<h3>Task Management</h3>
+				<p>Create, assign, and track tasks with ease. Set priorities and
+					deadlines to keep projects on schedule.</p>
+			</div>
+			<div class="feature-card">
+				<img src="https://cdn-icons-png.flaticon.com/512/1570/1570887.png"
+					alt="Team Collaboration">
+				<h3>Team Collaboration</h3>
+				<p>Real-time communication and file sharing to keep everyone on
+					the same page.</p>
+			</div>
+			<div class="feature-card">
+				<img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png"
+					alt="Reporting">
+				<h3>Advanced Reporting</h3>
+				<p>Generate detailed reports to analyze project progress and
+					team performance.</p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

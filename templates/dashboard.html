@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | ProManage</title>
+<link
+	href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+	rel="stylesheet">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+	<div class="dashboard-container">
+		<header class="dashboard-header">
+			<div class="header-content">
+				<h1>
+					Welcome back, <span class="username">Samahit</span>!
+				</h1>
+				<p class="subtitle">Here's what's happening with your projects
+					today</p>
+			</div>
+			<div class="user-avatar">
+				<img src="sc1.png"
+					alt="User Avatar">
+			</div>
+		</header>
+
+		<div class="stats-container">
+			<div class="stat-card">
+				<div class="stat-icon">
+					<i class="fas fa-project-diagram"></i>
+				</div>
+				<div class="stat-info">
+					<h3>12</h3>
+					<p>Active Projects</p>
+				</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-icon">
+					<i class="fas fa-tasks"></i>
+				</div>
+				<div class="stat-info">
+					<h3>24</h3>
+					<p>Tasks Today</p>
+				</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-icon">
+					<i class="fas fa-calendar-check"></i>
+				</div>
+				<div class="stat-info">
+					<h3>5</h3>
+					<p>Upcoming Deadlines</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="action-cards">
+			<div class="action-card projects">
+				<div class="card-content">
+					<h2>Projects</h2>
+					<p>Manage and track all your current projects</p>
+					<a href="#" class="action-btn">View Projects <i
+						class="fas fa-arrow-right"></i></a>
+				</div>
+				<div class="card-icon">
+					<i class="fas fa-folder-open"></i>
+				</div>
+			</div>
+
+			<div class="action-card profile">
+				<div class="card-content">
+					<h2>Profile</h2>
+					<p>Update your personal information and settings</p>
+					<a href="#" class="action-btn">Edit Profile <i
+						class="fas fa-arrow-right"></i></a>
+				</div>
+				<div class="card-icon">
+					<i class="fas fa-user-cog"></i>
+				</div>
+			</div>
+
+			<div class="action-card team">
+				<div class="card-content">
+					<h2>Team</h2>
+					<p>Connect with your team members and collaborate</p>
+					<a href="#" class="action-btn">View Team <i
+						class="fas fa-arrow-right"></i></a>
+				</div>
+				<div class="card-icon">
+					<i class="fas fa-users"></i>
+				</div>
+			</div>
+
+			<div class="action-card logout">
+				<div class="card-content">
+					<h2>Logout</h2>
+					<p>End your current session securely</p>
+					<a href="/" class="action-btn">Sign Out <i
+						class="fas fa-sign-out-alt"></i></a>
+				</div>
+				<div class="card-icon">
+					<i class="fas fa-power-off"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="recent-activity">
+			<h2 class="section-title">Recent Activity</h2>
+			<div class="activity-list">
+				<div class="activity-item">
+					<div class="activity-icon">
+						<i class="fas fa-check-circle"></i>
+					</div>
+					<div class="activity-details">
+						<p>Completed task "Design mockups" in Project X</p>
+						<span class="activity-time">2 hours ago</span>
+					</div>
+				</div>
+				<div class="activity-item">
+					<div class="activity-icon">
+						<i class="fas fa-comment-alt"></i>
+					</div>
+					<div class="activity-details">
+						<p>New comment from Sarah on Project Y</p>
+						<span class="activity-time">5 hours ago</span>
+					</div>
+				</div>
+				<div class="activity-item">
+					<div class="activity-icon">
+						<i class="fas fa-file-upload"></i>
+					</div>
+					<div class="activity-details">
+						<p>Uploaded new documents to Project Z</p>
+						<span class="activity-time">Yesterday</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
